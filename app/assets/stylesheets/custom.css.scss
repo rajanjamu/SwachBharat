@@ -25,11 +25,38 @@ body {
 	width: 100vw;
 }
 
+#scroll-menu {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	margin-top: 1%;
+	color: white;
+	position: fixed;
+	right: 0;
+
+	ul {
+		padding: 0;
+		li {
+			padding-right: 10px;
+			display: inline;
+			text-decoration: none;
+
+			a {
+				text-decoration: none;
+				color: grey;
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
 #brand-name {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 100px;
 	text-align: center;
-	margin-top: 20%;
+	margin-top: 18%;
 	color: white;
 }
 
@@ -54,7 +81,7 @@ body {
 	font-size: 20px;
 	margin-top: 2%;
 	padding: 10px;
-	margin-bottom: 35%;
+	margin-bottom: 26%;
 	font-family: 'Open Sans', sans-serif;
 }
 
