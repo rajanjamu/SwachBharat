@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213050130) do
+# <<<<<<< HEAD
+# ActiveRecord::Schema.define(version: 20141213050130) do
+# =======
+ActiveRecord::Schema.define(version: 20141213085723) do
+
 
   create_table "cleans", force: true do |t|
     t.integer  "user_id"
@@ -20,6 +24,8 @@ ActiveRecord::Schema.define(version: 20141213050130) do
     t.datetime "updated_at", null: false
     t.string   "aphoto"
     t.string   "bphoto"
+
+    t.string   "location"
   end
 
   create_table "marks", force: true do |t|
