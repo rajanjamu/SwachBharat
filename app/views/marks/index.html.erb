@@ -2,3 +2,5 @@
 <% @marks.each do |mark| %>
   <p>Go To Mark: <%= link_to "#{mark.id} |  #{mark.user_id} | #{mark.location}", mark_path(mark) %></p>
 <% end %>
+
+<%= link_to("Login through facebook", login_path) %>
