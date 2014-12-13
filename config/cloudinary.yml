@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: fivestars
+  api_key: '135393197683119'
+  api_secret: gIWvFl_ZfQLFLmLKCuhnUdCS5_M
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: fivestars
+  api_key: '135393197683119'
+  api_secret: gIWvFl_ZfQLFLmLKCuhnUdCS5_M
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: fivestars
+  api_key: '135393197683119'
+  api_secret: gIWvFl_ZfQLFLmLKCuhnUdCS5_M
+  enhance_image_tag: true
+  static_image_support: false

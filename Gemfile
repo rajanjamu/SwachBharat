@@ -53,3 +53,4 @@ end
 
 gem 'koala'
 gem 'bootstrap-sass'
+gem 'cloudinary'
