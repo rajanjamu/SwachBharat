@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'marks/index'
+  # get 'marks/index'
 
-  get 'marks/new'
-
+  # get 'marks/new'
+  root to: 'marks#index'
   resources :marks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
