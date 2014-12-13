@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # get 'marks/index'
 
   # get 'marks/new'
-  root to: 'marks#index'
+  root to: 'home#index'
   resources :marks
   get 'login' => 'sessions#login'
   # The priority is based upon order of creation: first created -> highest priority.
