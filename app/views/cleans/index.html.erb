@@ -1,0 +1,6 @@
+<h1>All Cleans</h1>
+<% @cleans.each do |clean| %>
+  <p>Go To Clean: <%= link_to "#{clean.id} |  #{clean.user_id} | #{clean.location}", clean_path(clean) %></p>
+<% end %>
+
+<%= link_to("Login through facebook", login_path) %>
