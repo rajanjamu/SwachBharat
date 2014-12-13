@@ -1,3 +1,20 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Mark ID</th>
+			<th>User ID</th>
+			<th>Location</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td>@mark.id</td>
+			<td>@mark.user_id</td>
+			<td>@mark.location</td>
+		</tr>
+	</tbody>
+</table>
 <%= @mark.id %> | <%= @mark.user_id %> | <%= @mark.location %>
 <%= image_tag(@mark.photo) %>
 <%= link_to "Back", marks_path %>
