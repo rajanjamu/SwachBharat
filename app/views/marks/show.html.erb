@@ -1,1 +1,3 @@
 <%= @mark.id %> | <%= @mark.user_id %> | <%= @mark.location %>
+<%= link_to "Back", marks_path %>
+<%= link_to "Delete", mark_path(@mark), method: :delete %>

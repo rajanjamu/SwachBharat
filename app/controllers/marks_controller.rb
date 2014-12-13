@@ -10,8 +10,8 @@ class MarksController < ApplicationController
   def create
     @mark = Mark.new(mark_params)
     if @mark.save 
-      flash.notice = "Mark #{@mark.user_name} saved"
-      redirect_to marks_path
+      flash.notice = "Mark id:#{@mark.id}|user_id:#{@mark.user_id}|location:#{@mark.location} saved"
+      redirect_to mark_path(@mark)
     end
   end
 
@@ -23,8 +23,24 @@ class MarksController < ApplicationController
   #   @mark = Mark.find(params)
   # end
 
-  def delete
-    @mark = Mark.find()
+  def destroy
+    @mark = Mark.find(params[:id])
+    if(@mark.delete)
+      flash.notice = "Mark id:#{@mark.id}|user_id:#{@mark.user_id}|location:#{@mark.location} deleted!"
+      redirect_to marks_path
+    end
+  end
+
+  def edit
+    @mark = Mark.find(params[:id])
+  end
+
+  def update
+    @mark = Mark.find(params[:id])
+    if(@mark.update(mark_params))
+      flash.notice = "Mark id:#{@mark.id}|user_id:#{@mark.user_id}|location:#{@mark.location} edit!"
+      redirect_to mark_path(@mark)
+    end
   end
 
   private
