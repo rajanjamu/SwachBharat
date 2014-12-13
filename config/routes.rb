@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # get 'marks/new'
 
-  root to: 'marks#index'
+  root to: 'home#index'
   resources :marks 
   resources :cleans
 
