@@ -1,6 +1,27 @@
 <h1>All Marks</h1>
-<% @marks.each do |mark| %>
-  <p>Go To Mark: <%= link_to "#{mark.id} |  #{mark.user_id} | #{mark.location}", mark_path(mark) %></p>
-<% end %>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Mark ID</th>
+			<th>User ID</th>
+			<th>Location</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @marks.each do |mark| %>
+			<tr>
+			
+				<td><%= mark.id %></td>
+				<td><%= mark.user_id %></td>
+				<td><%= mark.location %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
 
 <%= link_to("Login through facebook", login_path) %>
+
+
