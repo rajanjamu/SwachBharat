@@ -17,11 +17,12 @@ body {
 .bg {
 	position: fixed;
 	z-index: -1;
+	padding: 0 0;
 }
 
 .bg-image {
 	margin: 0;
-	width: 100%;
+	width: 100vw;
 }
 
 #brand-name {
