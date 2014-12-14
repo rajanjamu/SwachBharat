@@ -11,12 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-# <<<<<<< HEAD
-# ActiveRecord::Schema.define(version: 20141213050130) do
-# =======
-ActiveRecord::Schema.define(version: 20141213085723) do
-
+ActiveRecord::Schema.define(version: 20141214031123) do
 
   create_table "cleans", force: true do |t|
     t.integer  "user_id"
@@ -25,12 +20,8 @@ ActiveRecord::Schema.define(version: 20141213085723) do
     t.datetime "updated_at", null: false
     t.string   "aphoto"
     t.string   "bphoto"
-
     t.string   "location"
   end
-=======
-ActiveRecord::Schema.define(version: 20141214031123) do
->>>>>>> 8c06bd09a906f59270b457a361a3bcb0c6142045
 
   create_table "marks", force: true do |t|
     t.integer  "user_id"
