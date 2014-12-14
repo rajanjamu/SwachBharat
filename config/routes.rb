@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # App routes
   resources :users
-  root to: 'home#home', via: :get
+  root to: 'home#dashboard', via: :get
   get 'auth/facebook', as: "auth_provider"
   # get 'auth/facebook/callback', to: 'users#login'
 
