@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  def sample
+  def home
   end
 
   def dashboard

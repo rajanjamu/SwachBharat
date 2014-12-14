@@ -8,25 +8,5 @@
 <% end %>
 
 <% @marks.each do |mark| %>
-<div> <%= mark.id %> | <%= mark.user_id %> | <%= mark.location %> | <%= image_tag("") %> </div>
+	<div> <%= mark.id %> | <%= mark.user_id %> | <%= mark.location %> <%= image_tag mark.photo.url, class: "image" %> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div>
 <% end %>
-
-<!-- <table class="table">
-	<thead>
-		<tr>
-			<th>Mark ID</th>
-			<th>User ID</th>
-			<th>Location</th>
-		</tr>
-	</thead>
-
-	<tbody>
-		<% @marks.each do |mark| %>
-			<tr>
-				<td><%= mark.id %></td>
-				<td><%= mark.user_id %></td>
-				<td><%= mark.location %></td>
-			</tr>
-		<% end %>
-	</tbody>
-</table> -->

@@ -4,21 +4,21 @@ class MarksController < ApplicationController
     @mark = Mark.new
   end
 
-  def new
-    @mark = Mark.new
-  end
+  # def new
+  #   @mark = Mark.new
+  # end
 
   def create
     @mark = Mark.new(mark_params)
     if @mark.save 
       flash.notice = "Mark id:#{@mark.id}|user_id:#{@mark.user_id}|location:#{@mark.location} saved"
-      redirect_to mark_path(@mark)
+      redirect_to marks_path
     end
   end
 
-  def show
-    @mark = Mark.find(params[:id])
-  end
+  # def show
+  #   @mark = Mark.find(params[:id])
+  # end
 
   def destroy
     @mark = Mark.find(params[:id])
