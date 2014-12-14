@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"> Swatch Bharath</a>
+      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-leaf"></span> Swatch Bharath</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,9 +46,10 @@
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <section role="tabpanel" class="tab-pane active" id="mark">Mark map</section>
+        <%= render partial: "home/mark" %>
+        <%#= render partial: "home/share" %>
+        <%= render partial: "home/challenge" %>
         <section role="tabpanel" class="tab-pane" id="share">Share</section>
-        <section role="tabpanel" class="tab-pane" id="challenge">Challenge</section>
       </div>
 
     </div>

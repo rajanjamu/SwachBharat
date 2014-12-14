@@ -54,3 +54,4 @@ end
 gem 'koala'
 gem 'bootstrap-sass'
 gem 'cloudinary'
+gem 'autoprefixer-rails'
