@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def login
     @user = User.koala(request.env['omniauth.auth']['credentials'])
+    
   end
 end
 
