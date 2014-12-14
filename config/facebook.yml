@@ -1,6 +1,3 @@
 development:
   app_id: 395374750613467
   secret: 22d3d2815aec707674e0c248d7c7da42
-production:
-  app_id: 395374750613467
-  secret: 22d3d2815aec707674e0c248d7c7da42
