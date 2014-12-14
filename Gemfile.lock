@@ -204,7 +204,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  koala (~> 1.10.0rc)
+  koala
   omniauth-facebook
   pg
   rails (= 4.2.0.rc2)

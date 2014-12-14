@@ -52,6 +52,6 @@ group :production do
 end
 
 gem 'omniauth-facebook'
-gem "koala", "~> 1.10.0rc" 
+gem "koala" 
 gem 'bootstrap-sass'
 gem 'cloudinary'
