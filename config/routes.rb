@@ -11,14 +11,6 @@ Rails.application.routes.draw do
   get 'auth/facebook', as: "auth_provider"
   get 'auth/facebook/callback', to: 'users#login'
 
-
-  # get 'sessions/login'
-
-  # get 'marks/index'
-
-  # get 'marks/new'
-  root to: 'home#sample'
-
   resources :marks 
   resources :cleans
 
