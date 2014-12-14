@@ -16,6 +16,11 @@
 	</tbody>
 </table>
 <%= @mark.id %> | <%= @mark.user_id %> | <%= @mark.location %>
-<%= image_tag(@mark.photo) %>
+
+
+<%= image_tag(@mark.photo)%>
+
+
+
 <%= link_to "Back", marks_path %>
 <%= link_to "Delete", mark_path(@mark), method: :delete %>

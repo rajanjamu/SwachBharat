@@ -13,7 +13,6 @@
 	<tbody>
 		<% @marks.each do |mark| %>
 			<tr>
-			
 				<td><%= mark.id %></td>
 				<td><%= mark.user_id %></td>
 				<td><%= mark.location %></td>
@@ -23,5 +22,3 @@
 </table>
 
 <%= link_to("Login through facebook", login_path) %>
-
-

@@ -5,13 +5,21 @@ Rails.application.routes.draw do
   get 'home/sample'
 
 
-  # get 'sessions/login'
+  # App routes
+  resources :users
+  root to: 'home#sample', via: :get
+  get 'auth/facebook', as: "auth_provider"
+  get 'auth/facebook/callback', to: 'users#login'
 
-  # get 'marks/index'
+  resources :marks 
+  resources :cleans
 
-  # get 'marks/new'
-  root to: 'home#sample'
+  
+
+
+  
   resources :marks
+
   get 'login' => 'sessions#login'
   get 'dashboard' => 'home#dashboard'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -51,7 +51,8 @@ group :production do
 	gem 'rails_12factor'
 end
 
-gem 'koala'
+gem 'omniauth-facebook'
+gem "koala" 
 gem 'bootstrap-sass'
 gem 'cloudinary'
 gem 'autoprefixer-rails'
