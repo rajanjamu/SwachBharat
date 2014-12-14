@@ -17,9 +17,27 @@ Rails.application.routes.draw do
   # get 'marks/index'
 
   # get 'marks/new'
+<<<<<<< HEAD
+
+
+
+  root to: 'home#sample'
+
+  resources :marks 
+  resources :cleans
+
+  
+
+
+  
+  resources :marks
+
+  get 'login' => 'sessions#login'
+=======
   # root to: 'home#sample'
   resources :marks
   # get 'login' => 'login#login'
+>>>>>>> 8c06bd09a906f59270b457a361a3bcb0c6142045
   get 'dashboard' => 'home#dashboard'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
