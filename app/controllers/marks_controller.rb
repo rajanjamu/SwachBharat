@@ -12,7 +12,7 @@ class MarksController < ApplicationController
     @mark = Mark.new(mark_params)
     if @mark.save 
       flash.notice = "Mark id:#{@mark.id}|user_id:#{@mark.user_id}|location:#{@mark.location} saved"
-      redirect_to marks_path
+      redirect_to dashboard_path
     end
   end
 
