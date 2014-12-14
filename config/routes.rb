@@ -8,12 +8,13 @@ Rails.application.routes.draw do
   # App routes
   resources :users
   root to: 'home#sample', via: :get
+
+  # OmniAuth Routes
   get 'auth/facebook', as: "auth_provider"
   get 'auth/facebook/callback', to: 'home#dashboard'
-
+  
   resources :marks 
   resources :cleans
-  resources :marks
   get 'login' => 'sessions#login'
   get 'dashboard' => 'home#dashboard'
 end
