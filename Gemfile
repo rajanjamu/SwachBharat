@@ -47,7 +47,7 @@ group :development, :test do
 end
 
 group :production do
-	gem 'pg'
+	gem 'pg',  '~> 0.17.1' 
 	gem 'rails_12factor'
 end
 
@@ -55,3 +55,4 @@ gem 'omniauth-facebook'
 gem "koala" 
 gem 'bootstrap-sass'
 gem 'cloudinary'
+gem 'autoprefixer-rails'
