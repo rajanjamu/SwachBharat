@@ -1,7 +1,17 @@
 <h1>All Marks</h1>
 
+<%= form_for @mark do |f| %>
+  <%= f.text_field :user_id, placeholder: "User ID" %>
+  <%= f.text_field :location, placeholder: "Location" %>
+  <%= f.file_field :photo %>
+  <%= f.submit %>
+<% end %>
 
-<table class="table">
+<% @marks.each do |mark| %>
+<div> <%= mark.id %> | <%= mark.user_id %> | <%= mark.location %> </div>
+<% end %>
+
+<!-- <table class="table">
 	<thead>
 		<tr>
 			<th>Mark ID</th>
@@ -19,6 +29,4 @@
 			</tr>
 		<% end %>
 	</tbody>
-</table>
-
-<%= link_to("Login through facebook", login_path) %>
+</table> -->

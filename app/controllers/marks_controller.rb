@@ -1,6 +1,7 @@
 class MarksController < ApplicationController
   def index
     @marks = Mark.all
+    @mark = Mark.new
   end
 
   def new
@@ -18,10 +19,6 @@ class MarksController < ApplicationController
   def show
     @mark = Mark.find(params[:id])
   end
-
-  # def edit
-  #   @mark = Mark.find(params)
-  # end
 
   def destroy
     @mark = Mark.find(params[:id])
