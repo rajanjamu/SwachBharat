@@ -1,2 +1,98 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/*body {
+	background: image-url('taj.png');
+	background-repeat: no-repeat;
+	background-position: absolute;
+	background-size: contain;
+	background-color: #ecf0f1;
+
+}*/
+
+body {
+	background-color: #ecf0f1;
+}
+
+.bg {
+	position: fixed;
+	z-index: -1;
+	padding: 0 0;
+}
+
+.bg-image {
+	margin: 0;
+	width: 100vw;
+}
+
+#brand-name {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100px;
+	text-align: center;
+	margin-top: 20%;
+	color: white;
+}
+
+.feature {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 80px;
+	text-align: center;
+	margin-top: 20%;
+	color: black;
+}
+
+.featuretag {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 20%;
+	color: black;
+}
+
+.btn-custom {
+	width: 35%;
+	font-size: 20px;
+	margin-top: 2%;
+	padding: 10px;
+	margin-bottom: 35%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#btn-div {
+	text-align: center;
+}
+
+.level1 {
+	width: 387px;
+	/*margin: 1%;*/
+}
+
+.level2 {
+	width: 193px;
+	/*border-radius: 1%;*/
+}
+
+.color1 {
+	background-color: #1abc9c;
+}
+
+.color2 {
+	background-color: #eb974e;
+}
+
+.white {
+	color: white;
+}
+
+#footer {
+	height: 60px;
+	// background-color: #ecf0f1;
+	width: 100%;
+}
+
+.text-muted {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	margin: 20px auto;
+	text-align: center;
+}
