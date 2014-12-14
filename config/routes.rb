@@ -9,9 +9,30 @@ Rails.application.routes.draw do
   resources :users
   root to: 'home#sample', via: :get
   get 'auth/facebook', as: "auth_provider"
-  get 'auth/facebook/callback', to: 'home#dashboard'
+
+  get 'auth/facebook/callback', to: 'users#login'
+
+
+  # get 'sessions/login'
+
+  # get 'marks/index'
+
+  # get 'marks/new'
+
+
+
+
+  
+
+
+  resources :marks 
   resources :cleans
-  resources :marks
+ 
+  get 'login' => 'sessions#login'
+
+
+ 
+
 
   get 'dashboard' => 'home#dashboard'
 end
