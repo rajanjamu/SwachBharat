@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   get 'home/index'
   get 'home/dashboard'
-  get 'home/sample'
 
 
   # App routes
