@@ -1,34 +1,46 @@
-
-
 <div class="container-fluid bg">
-	<%= image_tag("taj.png", class: "bg-image") %>
+	<%= image_tag("http://res.cloudinary.com/fivestars/image/upload/v1418495829/taj_low_lawxcf.png", class: "bg-image") %>
 </div>
 
-<div class="container">
+<div class="container-fluid" id="home">
+	<div id="scroll-menu">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#mark">Mark</a></li>
+			<li><a href="#clean">Clean</a></li>
+			<li><a href="#challenge">Challenge</a></li>
+		</ul>
+
+	</div>
 	<div id="brand-name">Swach</div>
 	<div id="btn-div">
-		<%= link_to("Make your mark", login_path, class: "btn btn-success btn-custom") %>
+		<%= link_to("Do your bit", login_path, class: "btn btn-success btn-custom") %>
 	</div>
-	<!-- <button type="button" class="btn btn-success btn-custom">Mark a Spot</button> -->
 </div>
-<div class="container-fluid color2">
+
+<div class="container-fluid color2" id="mark">
 	<div class="feature white">Mark</div>
 	<div class="featuretag white">post a pic of the place that needs to be cleaned</div>
 </div>
-<div class="container-fluid">
+
+<div class="container-fluid" id="clean">
 	<div class="feature white">Clean</div>
 	<div class="featuretag white">pick a place | clean it | share your work | encourage others</div>
 </div>
-<div class="container-fluid color1">
+
+<div class="container-fluid color1" id="challenge">
 	<div class="feature white">Challenge</div>
 	<div class="featuretag white">challenge your friends | make the world a better place</div>
 </div>
 
+<<<<<<< HEAD
 	
 		
 			<img src="logo1.jpg" alt="The official HTML5 Icon"/>
 		
 
+=======
+>>>>>>> 7a7749ab82aa7f50e14404d3fcb61d4049188961
 <div id="footer" class="container">
 	<div class="container">
 		<p class="text-muted">&copy; Team Five Stars</p>

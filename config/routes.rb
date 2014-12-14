@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # get 'marks/index'
 
   # get 'marks/new'
-  root to: 'home#index'
+  root to: 'home#sample'
   resources :marks
   get 'login' => 'sessions#login'
   get 'dashboard' => 'home#dashboard'
