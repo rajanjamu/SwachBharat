@@ -2,11 +2,12 @@ class CleansController < ApplicationController
 
   def index
     @cleans = Clean.all
-  end
-
-  def new
     @clean = Clean.new
   end
+
+  # def new
+  #   @clean = Clean.new
+  # end
 
 
   def create
@@ -25,9 +26,9 @@ class CleansController < ApplicationController
     end
   end
 
-  def show
-    @clean = Clean.find(params[:id])
-  end
+  # def show
+  #   @clean = Clean.find(params[:id])
+  # end
 
   private
 

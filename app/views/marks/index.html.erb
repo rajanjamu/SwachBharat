@@ -10,3 +10,4 @@
 <% @marks.each do |mark| %>
 	<div> <%= mark.id %> | <%= mark.user_id %> | <%= mark.location %> <%= image_tag mark.photo.url, class: "image" %> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div>
 <% end %>
+
