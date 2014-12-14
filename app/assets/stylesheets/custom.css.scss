@@ -1,15 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/*body {
-	background: image-url('taj.png');
-	background-repeat: no-repeat;
-	background-position: absolute;
-	background-size: contain;
-	background-color: #ecf0f1;
-
-}*/
-
 body {
 	background-color: #ecf0f1;
 }
@@ -25,17 +16,44 @@ body {
 	width: 100vw;
 }
 
+#scroll-menu {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2vw;
+	margin-top: 1%;
+	color: white;
+	position: fixed;
+	right: 0;
+
+	ul {
+		padding-right: 1vw;
+		li {
+			padding-right: 0.8vw;
+			display: inline;
+			text-decoration: none;
+
+			a {
+				text-decoration: none;
+				color: grey;
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
 #brand-name {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 100px;
+	font-size: 8vw;
 	text-align: center;
-	margin-top: 20%;
+	margin-top: 17%;
 	color: white;
 }
 
 .feature {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 80px;
+	font-size: 6.4vw;
 	text-align: center;
 	margin-top: 20%;
 	color: black;
@@ -43,7 +61,7 @@ body {
 
 .featuretag {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 30px;
+	font-size: 2.4vw;
 	text-align: center;
 	margin-bottom: 20%;
 	color: black;
@@ -51,25 +69,15 @@ body {
 
 .btn-custom {
 	width: 35%;
-	font-size: 20px;
-	margin-top: 2%;
+	font-size: 1.6vw;
+	margin-top: 1%;
 	padding: 10px;
-	margin-bottom: 35%;
+	margin-bottom: 26%;
 	font-family: 'Open Sans', sans-serif;
 }
 
 #btn-div {
 	text-align: center;
-}
-
-.level1 {
-	width: 387px;
-	/*margin: 1%;*/
-}
-
-.level2 {
-	width: 193px;
-	/*border-radius: 1%;*/
 }
 
 .color1 {
@@ -85,7 +93,7 @@ body {
 }
 
 #footer {
-	height: 60px;
+	height: 4.8vw;
 	// background-color: #ecf0f1;
 	width: 100%;
 }
@@ -93,6 +101,6 @@ body {
 .text-muted {
 	font-family: 'Open Sans', sans-serif;
 	color: white;
-	margin: 20px auto;
+	margin: 1.6vw auto;
 	text-align: center;
 }
