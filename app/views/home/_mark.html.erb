@@ -13,11 +13,14 @@
   <%= f.submit "Submit", class: "btn btn-default"%>
 
 <% end %>
-</section>
 
 <% @marks.reverse_each do |mark| %>
-	<hr>
-	<div class="name"> Kavya <span class="location"> &nbsp;&nbsp;<%= mark.location %> </span></div><br />
-	<div> <%= image_tag mark.photo.url, class: "image" %> </div>
-	<!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
+  <hr>
+  <div class="name"> Kavya <span class="location"> &nbsp;&nbsp;<%= mark.location %> </span></div><br />
+  <div> <%= image_tag mark.photo.url, class: "image" %> </div>
+   <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> 
 <% end %>
+
+
+</section>
+
