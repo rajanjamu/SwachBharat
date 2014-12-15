@@ -11,4 +11,9 @@ class HomeController < ApplicationController
     @clean = Clean.new
 
   end
+  def contact
+  end
+
+  def about
+  end
 end
