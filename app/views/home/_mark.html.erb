@@ -32,8 +32,12 @@
 
   <% @marks.reverse_each do |mark| %>
   	<hr>
-  	<div class="name"> Kavya <span class="location"> &nbsp;&nbsp;<%= mark.location %> </span></div><br />
-  	<div> <%= image_tag mark.photo.url, class: "image" %> </div>
+  	<div class="user_name"> Kavya <span class="mark_location"> &nbsp;&nbsp;<%= mark.location %> </span></div><br />
+    <div class="mark_post">
+      <div> <%= image_tag mark.photo.url, class: "mark_image" %> </div>
+      <div class="mark_message"><%= mark.message %></div>
+    </div>
+  	
   	<!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
   <% end %>
 </section>
