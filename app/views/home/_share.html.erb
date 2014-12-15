@@ -20,10 +20,12 @@
             <span class="glyphicon glyphicon-camera"></span>
           </div>
           <div class="col-xs-11">
-            <%= f.input :photo, label: "Before pic" %>
-          
-          
-            <%= f.input :photo, label: "After pic" %>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-6"><%= f.input :photo, label: "Before pic" %></div>
+                <div class="col-xs-6"><%= f.input :photo, label: "After pic pic" %></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="input_grp container-fluid">
