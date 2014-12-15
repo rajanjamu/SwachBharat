@@ -1,0 +1,33 @@
+#mark {
+  h1 {
+    color: $primary-color;
+  }
+
+  .input_grp {
+    padding-left: 0;
+
+    .icon_container {
+      padding-left: 0;
+
+      .glyphicon {
+        font-size: 2em;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  form {
+    input.string, textarea.text {
+      width: 100%;
+    }
+
+    input.btn {
+      background-color: $primary-color;
+      border-color: $primary-color;
+
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
+    }
+  }
+}

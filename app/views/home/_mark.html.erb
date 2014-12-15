@@ -1,23 +1,39 @@
 <section role="tabpanel" class="tab-pane active" id="mark">
-  
-<%= form_for @mark do |f| %>
-  <div class="form-group">
-  	<br />
-    <%= f.text_field :location, class: "form-control", placeholder: "Area/Place, City" %>
-  </div>
-        
-  <div class="form-group">
-    <%= f.file_field :photo %>
-  </div>
-  
-  <%= f.submit "Submit", class: "btn btn-default"%>
+  <h1>
+    Mark a location
+  </h1>
+  <%= simple_form_for @mark, class: "form-horizontal" do |f| %>
+    <div class="input_grp container-fluid">
+      <div class="icon_container col-xs-1">
+        <span class="glyphicon glyphicon-camera"></span>
+      </div>
+      <div class="col-xs-11">
+        <%= f.input :photo, label: "Upload a pic" %>
+      </div>
+    </div>
+    <div class="input_grp container-fluid">
+      <div class="icon_container col-xs-1">
+        <span class="glyphicon glyphicon-map-marker"></span>
+      </div>
+      <div class="col-xs-11">
+        <%= f.input :location, placeholder: "Area/Place, City", label: false %>
+      </div>
+    </div>
+    <div class="input_grp container-fluid">
+      <div class="icon_container col-xs-1">
+        <span class="glyphicon glyphicon-comment"></span>
+      </div>
+      <div class="col-xs-11">
+        <%= f.input :message, placeholder: "Description", label: false %>
+      </div>
+    </div>
+    <%= f.submit "Upload", class: "btn btn-primary btn-lg" %>
+  <% end %>
 
-<% end %>
+  <% @marks.reverse_each do |mark| %>
+  	<hr>
+  	<div class="name"> Kavya <span class="location"> &nbsp;&nbsp;<%= mark.location %> </span></div><br />
+  	<div> <%= image_tag mark.photo.url, class: "image" %> </div>
+  	<!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
+  <% end %>
 </section>
-
-<% @marks.reverse_each do |mark| %>
-	<hr>
-	<div class="name"> Kavya <span class="location"> &nbsp;&nbsp;<%= mark.location %> </span></div><br />
-	<div> <%= image_tag mark.photo.url, class: "image" %> </div>
-	<!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
-<% end %>

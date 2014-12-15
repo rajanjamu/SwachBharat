@@ -1,6 +1,9 @@
 html {
   position: relative;
   min-height: 100%;
+}
+
+html, body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -10,14 +13,13 @@ html {
 }
 
 .navbar-default {
-  background: #2abb9b;
-  border-color: #2abb9b;
+  background: $primary-color;
+  border-color: $primary-color;
   border-radius: 0;
 }
 
 .navbar-default .navbar-brand {
-  color: #FFF;
-  font-family: 'Open Sans', sans-serif;
+  color: $light-color;
 }
 
 .navbar-brand {
@@ -35,7 +37,7 @@ html {
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: #FFF;
+  color: $light-color;
 }
 
 .navbar-default .navbar-nav>li>a:hover,
@@ -44,27 +46,28 @@ html {
 }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
-  color: #FFF;
-  background-color: #2abb9b;
+  color: $light-color;
+  background-color: $primary-color;
 }
 
 .dropdown-menu {
-  background-color: #2abb9b;
+  background-color: $primary-color;
   border: 0px solid transparent;
 }
 
 .dropdown-menu>li>a {
-  color: #FFF;
+  color: $light-color;
 }
 
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
-  background-color: #2abb9b;
-  color: #FFF;
+  background-color: $primary-color;
+  color: $light-color;
 }
 
 
 #main-content {
-  padding-top: 20px;  
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
 // Center Tabs
@@ -83,12 +86,10 @@ html {
 .name {
   font-size: 25px;
   font-weight: 900;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .location {
   font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .image {
@@ -98,13 +99,11 @@ html {
 
 .footer {
   color: #000;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 42px;
   background-color: #d2d7d3;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .footer p {
