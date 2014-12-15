@@ -2,17 +2,18 @@ class CleansController < ApplicationController
 
   def index
     @cleans = Clean.all
-  end
-
-  def new
     @clean = Clean.new
   end
+
+  # def new
+  #   @clean = Clean.new
+  # end
 
 
   def create
     @clean = Clean.new(clean_params)
     if @clean.save
-      redirect_to clean_path(@clean)
+      redirect_to dashboard_path
     end
     
   end
@@ -21,13 +22,13 @@ class CleansController < ApplicationController
     @clean = Clean.find(params[:id])
     if(@clean.delete)
       flash.notice = "Clean id:#{@clean.id}|user_id:#{@clean.user_id}|location:#{@clean.location} deleted!"
-      redirect_to cleans_path
+      redirect_to dashboard_path
     end
   end
 
-  def show
-    @clean = Clean.find(params[:id])
-  end
+  # def show
+  #   @clean = Clean.find(params[:id])
+  # end
 
   private
 

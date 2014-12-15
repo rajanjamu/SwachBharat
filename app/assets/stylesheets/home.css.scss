@@ -1,16 +1,3 @@
-/*body {
-	background: image-url('taj.png');
-	background-repeat: no-repeat;
-	background-position: absolute;
-	background-size: contain;
-	background-color: #ecf0f1;
-
-}*/
-
-body {
-	background-color: #ecf0f1;
-}
-
 .bg {
 	position: fixed;
 	z-index: -1;
@@ -23,7 +10,6 @@ body {
 }
 
 #scroll-menu {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 1.2vw;
 	margin-top: 1%;
 	color: white;
@@ -39,7 +25,7 @@ body {
 
 			a {
 				text-decoration: none;
-				color: grey;
+				color: gray;
 
 				&:hover {
 					color: white;
@@ -50,7 +36,6 @@ body {
 }
 
 #brand-name {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 8vw;
 	text-align: center;
 	margin-top: 17%;
@@ -58,7 +43,6 @@ body {
 }
 
 .feature {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 6.4vw;
 	text-align: center;
 	margin-top: 20%;
@@ -66,7 +50,6 @@ body {
 }
 
 .featuretag {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 2.4vw;
 	text-align: center;
 	margin-bottom: 20%;
@@ -79,7 +62,6 @@ body {
 	margin-top: 1%;
 	padding: 10px;
 	margin-bottom: 26%;
-	font-family: 'Open Sans', sans-serif;
 }
 
 #btn-div {
@@ -105,7 +87,6 @@ body {
 }
 
 .text-muted {
-	font-family: 'Open Sans', sans-serif;
 	color: white;
 	margin: 1.6vw auto;
 	text-align: center;

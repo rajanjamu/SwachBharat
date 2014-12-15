@@ -1,6 +1,21 @@
 <h1>All Cleans</h1>
-<% @cleans.each do |clean| %>
-  <p>Go To Clean: <%= link_to "#{clean.id} |  #{clean.user_id} | #{clean.location}", clean_path(clean) %></p>
+
+<%= form_for @clean do |f| %>
+  <%= f.text_field :user_id, placeholder: "User ID" %><br>
+  <%= f.text_field :location, placeholder: "Location" %><br>
+  <%= f.text_field :message, placeholder: "Tell your experience..." %><br>
+  <%= f.file_field :bphoto %><br>
+  <%= f.file_field :aphoto %><br>
+  <%= f.submit %>
 <% end %>
 
-<%= link_to("Login through facebook", login_path) %>
+<% @cleans.each do |clean| %>
+	<div>
+		<%= clean.id %> | 
+		<%= clean.user_id %> | 
+		<%= clean.location %>  
+		<%= image_tag clean.bphoto.url, class: "image" %>
+		<%= image_tag clean.aphoto.url, class: "image" %>
+		<%= link_to "Delete", clean_path(clean), method: :delete %> 
+	</div>
+<% end %>
