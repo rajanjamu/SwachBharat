@@ -3,17 +3,17 @@ class HomeController < ApplicationController
   end
 
   def dashboard
-
   	@marks = Mark.all
     @mark = Mark.new
 
     @cleans = Clean.all
     @clean = Clean.new
-
   end
+
   def contact
   end
 
   def about
   end
+
 end
