@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :cleans
   get 'login' => 'sessions#login'
   get 'dashboard' => 'home#dashboard'
+  get 'home' => 'home#home'
 end
