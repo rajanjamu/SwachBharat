@@ -1,4 +1,7 @@
-#mark {
+
+#share{
+
+
   h1 {
     color: $primary-color;
     margin-bottom: 20px;
@@ -17,7 +20,7 @@
     }
   }
 
-  .user_name {
+  .name {
     font-size: 25px;
     font-weight: 900;
 
@@ -29,21 +32,21 @@
         padding: 10px;
       }
 
-    .mark_location {
+    .clean_location {
       font-size: 15px;
     }
   }
 
-  .mark_post {
+  .clean_post {
     background-color: #ecf0f1;
     border-radius: 1%;
 
-    .mark_image {
+    .clean_image {
       margin: auto;
       width: 100%;
       padding: 10px;
     }
-    .mark_message {
+    .clean_message {
       padding: 5px 7px 7px 12px;
       font-size: 16px;
       font-weight: 600;
