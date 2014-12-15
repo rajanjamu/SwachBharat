@@ -30,6 +30,7 @@
     <%= f.submit "Upload", class: "btn btn-primary btn-lg" %>
   <% end %>
 
+
   <% @marks.reverse_each do |mark| %>
   	<hr>
   	<div class="name"> Kavya <span class="location"> &nbsp;&nbsp;<%= mark.location %> </span></div><br />
@@ -37,3 +38,4 @@
   	<!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
   <% end %>
 </section>
+

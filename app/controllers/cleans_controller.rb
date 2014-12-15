@@ -13,7 +13,7 @@ class CleansController < ApplicationController
   def create
     @clean = Clean.new(clean_params)
     if @clean.save
-      redirect_to cleans_path
+      redirect_to dashboard_path
     end
     
   end
@@ -22,7 +22,7 @@ class CleansController < ApplicationController
     @clean = Clean.find(params[:id])
     if(@clean.delete)
       flash.notice = "Clean id:#{@clean.id}|user_id:#{@clean.user_id}|location:#{@clean.location} deleted!"
-      redirect_to cleans_path
+      redirect_to dashboard_path
     end
   end
 

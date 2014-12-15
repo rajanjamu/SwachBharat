@@ -1,12 +1,13 @@
+
 <section role="tabpanel" class="tab-pane" id="share">
   
-    
-    <section role="tabpanel" class="tab-pane active" id="mark">
+
       <h1>
         Share
       </h1>
-      <%= simple_form_for @mark, class: "form-horizontal" do |f| %>
-       
+
+      <%= simple_form_for @clean, class: "form-horizontal" do |f| %>
+
         <div class="input_grp container-fluid">
           <div class="icon_container col-xs-1">
             <span class="glyphicon glyphicon-map-marker"></span>
@@ -20,10 +21,13 @@
             <span class="glyphicon glyphicon-camera"></span>
           </div>
           <div class="col-xs-11">
-            <%= f.input :photo, label: "Before pic" %>
+
+
+            <%= f.input :bphoto, label: "Before pic" %>
           
           
-            <%= f.input :photo, label: "After pic" %>
+            <%= f.input :aphoto, label: "After pic" %>
+
           </div>
         </div>
         <div class="input_grp container-fluid">
@@ -37,11 +41,17 @@
         <%= f.submit "Submit", class: "btn btn-primary btn-lg" %>
       <% end %>
 
-      <% @marks.reverse_each do |mark| %>
+
+      <% @cleans.reverse_each do |clean| %>
         <hr>
-        <div class="name"> Kavya <span class="location"> &nbsp;&nbsp;<%= mark.location %> </span></div><br />
-        <div> <%= image_tag mark.photo.url, class: "image" %> </div>
+        <div class="name"> Bhavya <span class="location"> &nbsp;&nbsp;<%= clean.location %> </span></div><br />
+        <div> <%= image_tag mark.bphoto.url, class: "image" %> </div>
+        <div> <%= image_tag mark.aphoto.url, class: "image" %> </div>
         <!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
       <% end %>
     </section>
-  </section>
+
+
+
+
+
