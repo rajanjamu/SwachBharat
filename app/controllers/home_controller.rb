@@ -3,7 +3,12 @@ class HomeController < ApplicationController
   end
 
   def dashboard
-  	 @marks = Mark.all
-      @mark = Mark.new
+
+  	@marks = Mark.all
+    @mark = Mark.new
+
+    @cleans = Clean.all
+    @clean = Clean.new
+
   end
 end
