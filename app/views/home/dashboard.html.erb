@@ -1,5 +1,4 @@
 <%= render 'common/header' %>
-
 <!-- Main Content -->
 <div class="container">
   <div id="main-content" class="col-xs-6 col-xs-offset-3">
@@ -13,6 +12,12 @@
               Mark
           </a>
         </li>
+        <li role="presentation">
+          <a href=" #join" aria-controls="profile" role="tab" data-toggle="tab">
+            <span class="glyphicon glyphicon-link">
+              Join
+            </a>
+          </li>
 
         <li role="presentation">
           <a href="#share" aria-controls="profile" role="tab" data-toggle="tab">
@@ -31,9 +36,11 @@
       <!-- Tab panes -->
       <div class="tab-content">
         <%= render partial: "home/mark" %>
+        <%= render partial: "home/join" %>
         <%= render partial: "home/share" %>
         <%= render partial: "home/challenge" %> 
-        <section role="tabpanel" class="tab-pane" id="share">Share</section>
+
+
       </div>
 
     </div>
