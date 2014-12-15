@@ -38,10 +38,12 @@
 
   <% @cleans.reverse_each do |clean| %>
   <hr>
-  <div class="name"> Bhavya <span class="location"> &nbsp;&nbsp;<%= clean.location %> </span></div><br />
-  <div> <%= image_tag mark.bphoto.url, class: "image" %> </div>
-  <div> <%= image_tag mark.aphoto.url, class: "image" %> </div>
-  <!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
+  <div class="user_name"> Bhavya <span class="clean_location"> &nbsp;&nbsp;<%= clean.location %> </span><%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"), clean, method: :delete, data: { confirm: 'Are you sure?' } %></div><br />
+  <div class="clean_post">
+    <div> <%= image_tag clean.bphoto.url, class: "clean_image" %> </div>
+    <div> <%= image_tag clean.aphoto.url, class: "clean_image" %> </div>
+    <div class="clean_message"><%= clean.message %></div>
+  </div>
   <% end %>
 </section>
 
