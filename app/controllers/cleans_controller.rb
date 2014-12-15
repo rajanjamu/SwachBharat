@@ -33,7 +33,7 @@ class CleansController < ApplicationController
   private
 
   def clean_params
-    params.require(:clean).permit(:user_id, :aphoto, :bphoto)
+    params.require(:clean).permit(:user_id, :aphoto, :bphoto, :message, :location)
     
   end
 

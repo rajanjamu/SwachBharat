@@ -1,57 +1,52 @@
-
 <section role="tabpanel" class="tab-pane" id="share">
-
-      <h1>
-        Share
-      </h1>
-
-      <%= simple_form_for @clean, class: "form-horizontal" do |f| %>
-
-        <div class="input_grp container-fluid">
-          <div class="icon_container col-xs-1">
-            <span class="glyphicon glyphicon-map-marker"></span>
-          </div>
-          <div class="col-xs-11">
-            <%= f.input :location, placeholder: "Area/Place, City", label: false %>
-          </div>
+  <h1>
+    Share your work
+  </h1>
+  <%= simple_form_for @clean, class: "form-horizontal" do |f| %>
+  <div class="input_grp container-fluid">
+    <div class="icon_container col-xs-1">
+      <span class="glyphicon glyphicon-camera"></span>
+    </div>
+    <div class="col-xs-11">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6"><%= f.input :aphoto, label: "Before pic" %></div>
+          <div class="col-xs-6"><%= f.input :bphoto, label: "After pic" %></div>
         </div>
-        <div class="input_grp container-fluid">
-          <div class="icon_container col-xs-1">
-            <span class="glyphicon glyphicon-camera"></span>
-          </div>
-          <div class="col-xs-11">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-xs-6"><%= f.input :bphoto, label: "Before pic" %></div>
-                <div class="col-xs-6"><%= f.input :aphoto, label: "After pic" %></div>
-              </div>
-            </div>
+      </div>
+    </div>
+  </div>
+  <div class="input_grp container-fluid">
+    <div class="icon_container col-xs-1">
+      <span class="glyphicon glyphicon-map-marker"></span>
+    </div>
+    <div class="col-xs-11">
+      <%= f.input :location, placeholder: "Area/Place, City", label: false %>
+    </div>
+  </div>
+  <div class="input_grp container-fluid">
+    <div class="icon_container col-xs-1">
+      <span class="glyphicon glyphicon-comment"></span>
+    </div>
+    <div class="col-xs-11">
+      <%= f.input :message, placeholder: "Description", label: false %>
+    </div>
+  </div>
+  <%= f.submit "Submit", class: "btn btn-primary btn-lg" %>
+  <% end %>
 
 
-            
+  <% @cleans.reverse_each do |clean| %>
+  <hr>
+  <div class="user_name"> Bhavya <span class="clean_location"> &nbsp;&nbsp;<%= clean.location %> </span><%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"), clean, method: :delete, data: { confirm: 'Are you sure?' } %></div><br />
+  <div class="clean_post">
+    <div> <%= image_tag clean.bphoto.url, class: "clean_image" %> </div>
+    <div> <%= image_tag clean.aphoto.url, class: "clean_image" %> </div>
+    <div class="clean_message"><%= clean.message %></div>
+  </div>
+  <% end %>
+</section>
 
-          </div>
-        </div>
-        <div class="input_grp container-fluid">
-          <div class="icon_container col-xs-1">
-            <span class="glyphicon glyphicon-comment"></span>
-          </div>
-          <div class="col-xs-11">
-            <%= f.input :message, placeholder: "Description", label: false %>
-          </div>
-        </div>
-        <%= f.submit "Submit", class: "btn btn-primary btn-lg" %>
-      <% end %>
-
-
-      <% @cleans.reverse_each do |clean| %>
-        <hr>
-        <div class="name"> Bhavya <span class="location"> &nbsp;&nbsp;<%= clean.location %> </span></div><br />
-        <div> <%= image_tag clean.bphoto.url, class: "image" %> </div>
-        <div> <%= image_tag clean.aphoto.url, class: "image" %> </div>
-        
-      <% end %>
-    </section>
 
 
 
