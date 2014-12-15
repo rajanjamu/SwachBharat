@@ -21,6 +21,14 @@
     font-size: 25px;
     font-weight: 900;
 
+    .glyphicon {
+        // margin-right: 10px;
+        font-size: 15px;
+        display: block;
+        float:right;
+        padding: 10px;
+      }
+
     .mark_location {
       font-size: 15px;
     }
@@ -29,6 +37,7 @@
   .mark_post {
     background-color: #ecf0f1;
     border-radius: 1%;
+
     .mark_image {
       margin: auto;
       width: 100%;
@@ -39,12 +48,7 @@
       font-size: 16px;
       font-weight: 600;
 
-      .glyphicon {
-        margin-right: 10px;
-        font-size: 18px;
-        display: block;
-        float:right;
-      }
+      
     }
   }
 
