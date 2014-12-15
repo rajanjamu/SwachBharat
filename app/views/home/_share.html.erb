@@ -1,6 +1,5 @@
 
 <section role="tabpanel" class="tab-pane" id="share">
-  
 
       <h1>
         Share
@@ -21,22 +20,16 @@
             <span class="glyphicon glyphicon-camera"></span>
           </div>
           <div class="col-xs-11">
-<<<<<<< HEAD
             <div class="container-fluid">
               <div class="row">
-                <div class="col-xs-6"><%= f.input :photo, label: "Before pic" %></div>
-                <div class="col-xs-6"><%= f.input :photo, label: "After pic" %></div>
+                <div class="col-xs-6"><%= f.input :bphoto, label: "Before pic" %></div>
+                <div class="col-xs-6"><%= f.input :aphoto, label: "After pic" %></div>
               </div>
             </div>
-=======
 
 
-            <%= f.input :bphoto, label: "Before pic" %>
-          
-          
-            <%= f.input :aphoto, label: "After pic" %>
+            
 
->>>>>>> 190c894c2611cbdc5d685264ab628dd8ab7aa5c6
           </div>
         </div>
         <div class="input_grp container-fluid">
@@ -54,9 +47,9 @@
       <% @cleans.reverse_each do |clean| %>
         <hr>
         <div class="name"> Bhavya <span class="location"> &nbsp;&nbsp;<%= clean.location %> </span></div><br />
-        <div> <%= image_tag mark.bphoto.url, class: "image" %> </div>
-        <div> <%= image_tag mark.aphoto.url, class: "image" %> </div>
-        <!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
+        <div> <%= image_tag clean.bphoto.url, class: "image" %> </div>
+        <div> <%= image_tag clean.aphoto.url, class: "image" %> </div>
+        
       <% end %>
     </section>
 
