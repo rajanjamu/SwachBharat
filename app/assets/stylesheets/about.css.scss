@@ -1,0 +1,13 @@
+#members {
+  .member {
+    width: 20%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+}
