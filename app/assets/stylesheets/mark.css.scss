@@ -40,16 +40,10 @@
       font-weight: 600;
 
       .glyphicon {
-        visibility: hidden;
         margin-right: 10px;
         font-size: 18px;
         display: block;
         float:right;
-      }
-      &:hover {
-        .glyphicon {
-          visibility: visible;
-        }
       }
     }
   }
