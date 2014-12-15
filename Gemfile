@@ -58,3 +58,5 @@ gem "koala"
 gem 'bootstrap-sass'
 gem 'cloudinary'
 gem 'autoprefixer-rails'
+gem 'simple_form'
+gem 'annotate'

@@ -42,7 +42,7 @@ class MarksController < ApplicationController
 
   private
   def mark_params
-    params.require(:mark).permit(:user_id, :location, :photo)
+    params.require(:mark).permit(:user_id, :location, :photo, :message)
   end
 
 end
