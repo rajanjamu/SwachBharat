@@ -45,9 +45,9 @@
       <% @cleans.reverse_each do |clean| %>
         <hr>
         <div class="name"> Bhavya <span class="location"> &nbsp;&nbsp;<%= clean.location %> </span></div><br />
-        <div> <%= image_tag mark.bphoto.url, class: "image" %> </div>
-        <div> <%= image_tag mark.aphoto.url, class: "image" %> </div>
-        <!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
+        <div> <%= image_tag clean.bphoto.url, class: "image" %> </div>
+        <div> <%= image_tag clean.aphoto.url, class: "image" %> </div>
+        
       <% end %>
     </section>
 
