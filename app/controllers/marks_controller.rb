@@ -24,7 +24,7 @@ class MarksController < ApplicationController
     @mark = Mark.find(params[:id])
     if(@mark.delete)
       flash.notice = "Mark id:#{@mark.id}|user_id:#{@mark.user_id}|location:#{@mark.location} deleted!"
-      redirect_to marks_path
+      redirect_to dashboard_path
     end
   end
 
