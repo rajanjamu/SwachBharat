@@ -1,5 +1,9 @@
+<%= render 'common/header' %>
+
 <div align="center">
-  <h3>Send A message to Us</h3>
+  <h3 class="conhead">Send A message to Us</h3>
+
+  <div> We will be glad to have your feedback and suggestions</div>
 
   <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
     <%= f.input :name, :required => true %>
@@ -14,3 +18,5 @@
     </div>
   <% end %>
 </div>
+
+<%= render 'common/footer' %>

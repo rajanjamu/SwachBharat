@@ -13,7 +13,7 @@ class CleansController < ApplicationController
   def create
     @clean = Clean.new(clean_params)
     if @clean.save
-      redirect_to dashboard_path
+      # redirect_to dashboard_path
     end
     
   end
@@ -26,9 +26,9 @@ class CleansController < ApplicationController
     end
   end
 
-  # def show
-  #   @clean = Clean.find(params[:id])
-  # end
+  def show
+    @clean = Clean.find(params[:id])
+  end
 
   private
 
