@@ -25,7 +25,7 @@ class CleansController < ApplicationController
   def destroy
     @clean = Clean.find(params[:id])
     if(@clean.delete)
-      flash.notice = "Clean id:#{@clean.id}|user_id:#{@clean.user_id}|location:#{@clean.location} deleted!"
+      # flash.notice = "Clean id:#{@clean.id}|user_id:#{@clean.user_id}|location:#{@clean.location} deleted!"
       redirect_to dashboard_path
     end
   end

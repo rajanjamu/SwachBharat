@@ -36,7 +36,7 @@
     .btn {
       display: block;
       float:right;
-      margin: 10px;
+      // margin: 10px;
     }
 
     // a {
@@ -64,6 +64,8 @@
   }
 
   form {
+    margin-left: 2%;
+
     input.string, textarea.text {
       width: 100%;
     }
@@ -71,6 +73,9 @@
     input.btn {
       background-color: $primary-color;
       border-color: $primary-color;
+      color: white;
+      margin-bottom: 2%;
+      margin-top: 1%;
 
       &:hover {
         background-color: darken($primary-color, 5%);
