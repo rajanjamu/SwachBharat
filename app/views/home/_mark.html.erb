@@ -1,6 +1,8 @@
+
 <% unless @mark.photo_url.nil? %><%= image_tag @mark.photo_url %><br />
 <%= image_tag @user.avatar_url(:display) %><% end %>
 <section role="tabpanel" class="tab-pane active" id="mark">
+
   <h1>
     Mark a location
   </h1>
@@ -29,22 +31,25 @@
         <%= f.input :message, placeholder: "Description", label: false %>
       </div>
     </div>
+    <%= f.hidden_field :user_id %>
     <%= f.submit "Upload", class: "btn btn-primary btn-lg" %>
   <% end %>
 
 
-  <% @marks.reverse_each do |mark| %>
+  <% @marks.reverse_each do |post| %>
   	<hr>
-  	<div class="user_name"> Kavya <span class="mark_location"> &nbsp;&nbsp;<%= mark.location %> </span><%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"),mark, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <span class="glyphicon glyphicon-link"</span>
-    </div><br />
-
-    <div class="mark_post">
-      <div> <%= image_tag mark.photo.url, class: "mark_image" %> </div>
-      <div class="mark_message"><%= mark.message %></div>
+  	<div class="post">
+      <%= current_user.name %>
+      <span class="post_location"> &nbsp;&nbsp;<%= post.location %></span>
+        <%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"),post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to content_tag(:button, 'Start', class: "btn btn-default btn-xs"),post, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
-  	
-  	<!-- <div> <%= link_to("delete", mark_path(mark) ,method: :delete) %> </div> -->
+    <br />
+
+    <div class="post_content">
+      <div> <%= image_tag post.photo.url, class: "post_image" %> </div>
+      <div class="post_message"><%= post.message %></div>
+    </div>
   <% end %>
 </section>
 

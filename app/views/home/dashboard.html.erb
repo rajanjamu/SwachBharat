@@ -1,62 +1,46 @@
 <% if current_user.nil? %>
-  <script type="text/javascript">
-    window.location.href="/home"
-  </script>
+<script type="text/javascript">
+window.location.href="/home"
+</script>
 <% else %>
-<%= render partial: "common/header" %>
+  <%= render partial: "common/header" %>
+  <!-- Main Content -->
+  <div class="container">
+    <div id="main-content" class="col-xs-6 col-xs-offset-3">
+      <div role="tabpanel">
 
-<% #@graph = current_user_graph(current_user) %>
-<% #@graph.get_object("me") %>
-<!-- Main Content -->
-<div class="container">
-  <div id="main-content" class="col-xs-6 col-xs-offset-3">
-    <div role="tabpanel">
-
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active">
-          <a href="#mark" aria-controls="home" role="tab" data-toggle="tab">
-            <span class="glyphicon glyphicon-map-marker"></span>
-
-          </a>
-        </li>
-        <li role="presentation">
-          <a href=" #join" aria-controls="profile" role="tab" data-toggle="tab">
-            <span class="glyphicon glyphicon-link">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#mark" aria-controls="home" role="tab" data-toggle="tab">
+              <span class="glyphicon glyphicon-map-marker"></span>
+              Mark
+            </a>
+          </li>
+          <li role="presentation">
+            <a href=" #join" aria-controls="profile" role="tab" data-toggle="tab">
+              <span class="glyphicon glyphicon-link">
               Join
             </a>
           </li>
 
           <li role="presentation">
-            <a href="#share" aria-controls="profile" role="tab" data-toggle="tab">
-              <span class="glyphicon glyphicon-share">
-                Share
-              </a>
-            </li>
-            <li role="presentation">
-              <a href="#challenge" aria-controls="messages" role="tab" data-toggle="tab">
-                <span class="glyphicon glyphicon-thumbs-up"></span>
-                Challenge
-              </a>
-            </li>
-          </ul>
+            <a href="#challenge" aria-controls="messages" role="tab" data-toggle="tab">
+              <span class="glyphicon glyphicon-thumbs-up"></span>
+              Challenge
+            </a>
+          </li>
+        </ul>
 
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <%= render partial: "home/mark" %>
-            <%= render partial: "home/join" %>
-            <%= render partial: "home/share" %>
-            <%= render partial: "home/challenge" %> 
-
-        
-
-
-          </div>
-
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <%= render partial: "home/mark" %>
+          <%= render partial: "home/join" %>
+          <%= render partial: "home/challenge" %> 
         </div>
       </div>
-
     </div>
-    <!-- End of Main Content -->
-    <%= render partial: "common/footer" %>
-    <% end %>
+  </div>
+  <!-- End of Main Content -->
+  <%= render partial: "common/footer" %>
+<% end %>

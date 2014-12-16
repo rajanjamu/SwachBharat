@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   resources :cleans
   get 'login' => 'sessions#login'
   get 'dashboard' => 'home#dashboard'
-  get 'contact'=>'home#contact'
+  
   get 'about'=>'home#about'
+
+  resources "contacts", only: [:new, :create]
+  get 'contact'=>'contacts#new'
 
   # OmniAuth Routes
   get 'auth/:provider/callback', to: 'sessions#create'
