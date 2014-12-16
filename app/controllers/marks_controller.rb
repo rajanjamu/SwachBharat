@@ -16,9 +16,9 @@ class MarksController < ApplicationController
     end
   end
 
-  # def show
-  #   @mark = Mark.find(params[:id])
-  # end
+  def show
+    @mark = Mark.find(params[:id])
+  end
 
   def destroy
     @mark = Mark.find(params[:id])
