@@ -1,7 +1,4 @@
-<% if current_user.nil? %>
-<% redirect_to home_path %>
-<% else %>
-<%= render 'common/header' %>
+<%= render partial: 'common/header' %>
 <!-- Main Content -->
 <div class="container">
   <div id="main-content" class="col-xs-6 col-xs-offset-3">
@@ -51,5 +48,4 @@
   
 </div>
 <!-- End of Main Content -->
-<%= render 'common/footer' %>
-<% end %>
+<%= render partial: 'common/footer' %>
