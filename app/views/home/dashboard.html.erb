@@ -1,4 +1,9 @@
-<%= render partial: 'common/header' %>
+<% if current_user.nil? %>
+<% redirect_to home_path %>
+<% else %>
+<%= render partial: "common/header" %>
+<% #@graph = current_user_graph(current_user) %>
+<% #@graph.get_object("me") %>
 <!-- Main Content -->
 <div class="container">
   <div id="main-content" class="col-xs-6 col-xs-offset-3">
