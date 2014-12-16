@@ -40,13 +40,6 @@ ActiveRecord::Schema.define(version: 20141216050849) do
     t.text     "message"
   end
 
-  create_table "picks", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "mark_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: true do |t|
     t.string   "provider"
     t.string   "uid"
