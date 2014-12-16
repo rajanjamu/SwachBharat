@@ -12,7 +12,9 @@ class CleansController < ApplicationController
 
   def create
     @clean = Clean.new(clean_params)
-    @clean.bphoto = @clean.mark.photo
+    @clean.user_id = current_user.id
+    @clean.remote_bphoto_url = @clean.mark.photo_url
+
     
     if @clean.save
       # redirect_to dashboard_path
@@ -36,7 +38,7 @@ class CleansController < ApplicationController
 
   def clean_params
     params.require(:clean).permit(:user_id, :aphoto, :bphoto, :message, :mark_id)
-    
   end
+
 
 end
