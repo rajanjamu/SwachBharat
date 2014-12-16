@@ -4,6 +4,7 @@
   </script>
 <% else %>
 <%= render partial: "common/header" %>
+
 <% #@graph = current_user_graph(current_user) %>
 <% #@graph.get_object("me") %>
 <!-- Main Content -->
@@ -16,7 +17,7 @@
         <li role="presentation" class="active">
           <a href="#mark" aria-controls="home" role="tab" data-toggle="tab">
             <span class="glyphicon glyphicon-map-marker"></span>
-              &nbsp;Mark
+
           </a>
         </li>
         <li role="presentation">
@@ -26,34 +27,36 @@
             </a>
           </li>
 
-        <li role="presentation">
-          <a href="#share" aria-controls="profile" role="tab" data-toggle="tab">
-            <span class="glyphicon glyphicon-share">
-              Share
-            </a>
-          </li>
-        <li role="presentation">
-          <a href="#challenge" aria-controls="messages" role="tab" data-toggle="tab">
-            <span class="glyphicon glyphicon-thumbs-up"></span>
-              &nbsp;Challenge
-          </a>
-        </li>
-      </ul>
+          <li role="presentation">
+            <a href="#share" aria-controls="profile" role="tab" data-toggle="tab">
+              <span class="glyphicon glyphicon-share">
+                Share
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#challenge" aria-controls="messages" role="tab" data-toggle="tab">
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+                Challenge
+              </a>
+            </li>
+          </ul>
 
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <%= render partial: "home/mark" %>
-        <%= render partial: "home/join" %>
-        <%= render partial: "home/share" %>
-        <%= render partial: "home/challenge" %> 
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <%= render partial: "home/mark" %>
+            <%= render partial: "home/join" %>
+            <%= render partial: "home/share" %>
+            <%= render partial: "home/challenge" %> 
+
+        
 
 
+          </div>
+
+        </div>
       </div>
 
     </div>
-  </div>
-  
-</div>
-<!-- End of Main Content -->
-<%= render 'common/footer' %>
-<% end %>
+    <!-- End of Main Content -->
+    <%= render partial: "common/footer" %>
+    <% end %>
