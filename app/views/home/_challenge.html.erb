@@ -1,6 +1,7 @@
 <section role="tabpanel" class="tab-pane" id="challenge">
 <h1> Challenge your friends </h1>
 <% @cleans.reverse_each do |post| %>
+<% if post.isclean %>
   <hr>
   <div class="post"> 
     <%= current_user.name %>
@@ -19,5 +20,6 @@
     </div>
     <div class="post_message"><%= post.message %></div>
   </div>
+  <% else %><% end %>
   <% end %>
 </section>
