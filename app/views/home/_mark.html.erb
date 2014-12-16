@@ -12,7 +12,7 @@
         <span class="glyphicon glyphicon-camera"></span>
       </div>
       <div class="col-xs-11">
-        <%= f.input :photo, label: "Upload a pic" %>
+        <%= f.input :photo, label: "Upload a picture of dirty place" %>
       </div>
     </div>
     <div class="input_grp container-fluid">
@@ -51,7 +51,7 @@
         <!-- Share on facebook code end -->
 
         <%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"),post, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <%= link_to content_tag(:button, 'Start', class: "btn btn-default btn-xs"),post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <button type="button" id="btn-start" class="btn btn-default btn-xs">Start</button>
     </div>
     <br />
 
