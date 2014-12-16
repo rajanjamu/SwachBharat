@@ -39,7 +39,7 @@
   <% @marks.reverse_each do |post| %>
   	<hr>
   	<div class="post">
-      <%= User.find(post.user_id).name %>
+      <%= post.user.name %>
       <span class="post_location"> &nbsp;&nbsp;<%= post.location %></span>
 
         <!-- Share on facebook code -->
