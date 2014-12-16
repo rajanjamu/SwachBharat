@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216050849) do
+ActiveRecord::Schema.define(version: 20141216133202) do
 
   create_table "cleans", force: true do |t|
     t.integer  "user_id"
@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20141216050849) do
     t.datetime "updated_at", null: false
     t.string   "aphoto"
     t.string   "bphoto"
-    t.string   "location"
+    t.integer  "mark_id"
   end
+
+  add_index "cleans", ["mark_id"], name: "index_cleans_on_mark_id"
 
   create_table "contacts", force: true do |t|
     t.string   "name"
