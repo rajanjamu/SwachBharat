@@ -20,16 +20,16 @@
     }
   }
 
-  .name {
+  .user_name {
     font-size: 25px;
     font-weight: 900;
 
     .glyphicon {
-        // margin-right: 10px;
-        font-size: 15px;
+        font-size: 0.65em;
         display: block;
         float:right;
         padding: 10px;
+        color: $primary-color;
       }
 
     .clean_location {
@@ -48,7 +48,7 @@
     }
     .clean_message {
       padding: 5px 7px 7px 12px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
 
       
