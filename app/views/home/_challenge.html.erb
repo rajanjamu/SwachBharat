@@ -7,11 +7,7 @@
     <span class="post_location"> &nbsp;&nbsp;<%= post.location %> </span>
     <%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"), post, method: :delete, data: { confirm: 'Are you sure?' } %>
     <%= link_to content_tag(:button, 'Challenge', class: "btn btn-default btn-xs"),post, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% href = 'http://swachbharat.herokuapp.com/cleans/' + post.id.to_s %>
-    <% href = Rack::Utils.escape(href) %>
-    <% href = "https://www.facebook.com/sharer/sharer.php?u=" + href + "&t=Cleaning%20" %>
-    <% href = href + post.location %>
-    <a href= "<%= href %>"><%= image_tag 'http://simplesharingbuttons.com/images/simple_icons_black/Facebook.png', height: '26px' %></a>
+    
   </div>
 
   <br />

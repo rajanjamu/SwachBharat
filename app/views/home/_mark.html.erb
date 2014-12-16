@@ -39,15 +39,11 @@
   <% @marks.reverse_each do |post| %>
   	<hr>
   	<div class="post">
-      <%= current_user.name %>
+      <%= User.find_by(post.user_id).name %>
       <span class="post_location"> &nbsp;&nbsp;<%= post.location %></span>
 
         <!-- Share on facebook code -->
-        <% href = 'http://swachbharat.herokuapp.com/marks/' + post.id.to_s %>
-        <% href = Rack::Utils.escape(href) %>
-        <% href = "https://www.facebook.com/sharer/sharer.php?u=" + href + "&t=Cleaning%20" %>
-        <% href = href + post.location %>
-        <a href= "<%= href %>"><%= image_tag 'http://simplesharingbuttons.com/images/simple_icons_black/Facebook.png', width: '26px' %></a>
+        
         <!-- Share on facebook code end -->
 
         <%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"),post, method: :delete, data: { confirm: 'Are you sure?' } %>
