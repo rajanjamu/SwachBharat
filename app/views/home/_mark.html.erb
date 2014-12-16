@@ -47,7 +47,13 @@
         <!-- Share on facebook code end -->
 
         <%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"),post, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <button type="button" id="btn-start" class="btn btn-default btn-xs">Start</button>
+
+        <%= simple_form_for @clean, class: "form-horizontal", remote: true do |f| %>
+          <%= f.input :mark_id, as: :hidden, input_html: { value: post.id } %>
+          <%= f.submit 'Start', class: "btn btn-default btn-xs", id: "btn-start" %>
+        <% end %>
+
+        <!-- <button type="button" id="btn-start" class="btn btn-default btn-xs">Start</button> -->
     </div>
     <br />
 
