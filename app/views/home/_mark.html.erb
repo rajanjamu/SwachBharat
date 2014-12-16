@@ -35,7 +35,7 @@
 
   <% @marks.reverse_each do |mark| %>
   	<hr>
-  	<div class="user_name"> Kavya <span class="mark_location"> &nbsp;&nbsp;<%= mark.location %> </span><%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"),mark, method: :delete, data: { confirm: 'Are you sure?' } %>
+  	<div class="user_name"><%= current_user.name %><span class="mark_location"> &nbsp;&nbsp;<%= mark.location %> </span><%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"),mark, method: :delete, data: { confirm: 'Are you sure?' } %>
       <span class="glyphicon glyphicon-link"</span>
     </div><br />
 
