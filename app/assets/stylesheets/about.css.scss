@@ -6,10 +6,15 @@
       border-radius: 50%;
       width: 80%;
     }
+    span.glyphicon {
+      color: rgb(244,118,28);
+    }
+
   }
 }
-// span.glyphicon {
-//   color:orange;
-//   font-size: 20px;
-//   margin-right: 15px;
-// }
+.container{
+  h1{
+    font-family: italic;
+    color:#337ab7;
+  }
+}
