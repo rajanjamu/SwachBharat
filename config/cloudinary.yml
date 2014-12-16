@@ -1,4 +1,4 @@
----
+# config/cloudinary.yml
 development:
   cloud_name: fivestars
   api_key: '135393197683119'

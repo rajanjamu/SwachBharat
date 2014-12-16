@@ -1,3 +1,5 @@
+<% unless @mark.photo_url.nil? %><%= image_tag @mark.photo_url %><br />
+<%= image_tag @user.avatar_url(:display) %><% end %>
 <section role="tabpanel" class="tab-pane active" id="mark">
   <h1>
     Mark a location
