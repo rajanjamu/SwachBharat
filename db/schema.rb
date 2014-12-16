@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216133202) do
+ActiveRecord::Schema.define(version: 20141216154110) do
 
   create_table "cleans", force: true do |t|
     t.integer  "user_id"
     t.string   "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "aphoto"
     t.string   "bphoto"
     t.integer  "mark_id"
+    t.boolean  "isclean",    default: false
   end
 
   add_index "cleans", ["mark_id"], name: "index_cleans_on_mark_id"
