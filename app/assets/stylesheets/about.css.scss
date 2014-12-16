@@ -1,6 +1,8 @@
 #members {
+
   .member {
     margin-bottom: 2em;
+
 
     img {
       border-radius: 50%;
@@ -12,9 +14,19 @@
 
   }
 }
+
 .container{
   h1{
     font-family: italic;
     color:#337ab7;
   }
+
+
+
+#members{
+.member{
+  display:inline;
+}
+}
+
 }

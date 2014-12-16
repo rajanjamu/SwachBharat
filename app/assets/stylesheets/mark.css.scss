@@ -17,9 +17,13 @@
     }
   }
 
-  .user_name {
+  .post {
     font-size: 25px;
     font-weight: 900;
+
+    .post_location {
+      font-size: 15px;
+    }
 
     .glyphicon {
       font-size: 0.65em;
@@ -29,21 +33,23 @@
       color: $primary-color;
     }
 
-    .mark_location {
-      font-size: 15px;
+    .btn {
+      display: block;
+      float:right;
+      margin: 10px;
     }
   }
 
-  .mark_post {
+  .post_content {
     background-color: #ecf0f1;
     border-radius: 1%;
 
-    .mark_image {
+    .post_image {
       margin: auto;
       width: 100%;
       padding: 10px;
     }
-    .mark_message {
+    .post_message {
       padding: 5px 7px 7px 12px;
       font-size: 15px;
       font-weight: 600;

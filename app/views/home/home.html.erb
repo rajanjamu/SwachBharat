@@ -1,4 +1,8 @@
-
+<% if current_user %>
+  <script type="text/javascript">
+    window.location.href="/dashboard"
+  </script>
+ <% else %>
 <div class="container-fluid bg">
 	<%= image_tag("http://res.cloudinary.com/fivestars/image/upload/v1418495829/taj_low_lawxcf.png", class: "bg-image") %>
 </div>
@@ -34,6 +38,12 @@
 </div>
 <div id="footer" class="container">
 	<div class="container">
-		<p class="text-muted">&copy; Team Five Stars</p>
+		<p class="text-muted">
+			&copy; Team Five Stars | 
+	    	<%= link_to("About Us", about_path) %> | 
+	    	<%= link_to("Contact Us", contact_path) %>
+    	</p>
 	</div>
 </div>
+
+<% end %>
