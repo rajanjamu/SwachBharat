@@ -26,9 +26,9 @@ class CleansController < ApplicationController
     end
   end
 
-  # def show
-  #   @clean = Clean.find(params[:id])
-  # end
+  def show
+    @clean = Clean.find(params[:id])
+  end
 
   private
 
