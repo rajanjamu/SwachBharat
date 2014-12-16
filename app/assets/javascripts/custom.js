@@ -25,8 +25,3 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  $('#btn-finish').on('click', function() {
-    $('a[href="#challenge"]').tab('show');
-  });
-});

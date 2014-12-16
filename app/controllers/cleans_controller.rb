@@ -13,7 +13,7 @@ class CleansController < ApplicationController
   def create
     @clean = Clean.new(clean_params)
     if @clean.save
-      redirect_to dashboard_path
+      # redirect_to dashboard_path
     end
     
   end
