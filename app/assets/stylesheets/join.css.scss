@@ -1,22 +1,20 @@
 #join{
+  h1 {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
 
+  .user_name {
+    font-size: 25px;
+    font-weight: 900;
 
-h1 {
-  color: $primary-color;
-  margin-bottom: 20px;
-}
-
-.user_name {
-  font-size: 25px;
-  font-weight: 900;
-
-  .glyphicon {
+    .glyphicon {
       // margin-right: 10px;
       font-size: 15px;
       display: block;
       float:right;
       padding: 10px;
     }
-    }
 
-}
+    }
+    }

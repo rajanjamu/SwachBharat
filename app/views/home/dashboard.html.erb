@@ -1,7 +1,12 @@
 <% if current_user.nil? %>
-<% redirect_to home_path %>
+  <script type="text/javascript">
+    window.location.href="/home"
+  </script>
 <% else %>
-<%= render 'common/header' %>
+<%= render partial: "common/header" %>
+
+<% #@graph = current_user_graph(current_user) %>
+<% #@graph.get_object("me") %>
 <!-- Main Content -->
 <div class="container">
   <div id="main-content" class="col-xs-6 col-xs-offset-3">
@@ -22,34 +27,36 @@
             </a>
           </li>
 
-        <li role="presentation">
-          <a href="#share" aria-controls="profile" role="tab" data-toggle="tab">
-            <span class="glyphicon glyphicon-share">
-              Share
-            </a>
-          </li>
-        <li role="presentation">
-          <a href="#challenge" aria-controls="messages" role="tab" data-toggle="tab">
-            <span class="glyphicon glyphicon-thumbs-up"></span>
-              Challenge
-          </a>
-        </li>
-      </ul>
+          <li role="presentation">
+            <a href="#share" aria-controls="profile" role="tab" data-toggle="tab">
+              <span class="glyphicon glyphicon-share">
+                Share
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#challenge" aria-controls="messages" role="tab" data-toggle="tab">
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+                Challenge
+              </a>
+            </li>
+          </ul>
 
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <%= render partial: "home/mark" %>
-        <%= render partial: "home/join" %>
-        <%= render partial: "home/share" %>
-        <%= render partial: "home/challenge" %> 
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <%= render partial: "home/mark" %>
+            <%= render partial: "home/join" %>
+            <%= render partial: "home/share" %>
+            <%= render partial: "home/challenge" %> 
+
+        
 
 
+          </div>
+
+        </div>
       </div>
 
     </div>
-  </div>
-  
-</div>
-<!-- End of Main Content -->
-<%= render 'common/footer' %>
-<% end %>
+    <!-- End of Main Content -->
+    <%= render partial: "common/footer" %>
+    <% end %>
