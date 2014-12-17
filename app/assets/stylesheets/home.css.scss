@@ -1,12 +1,13 @@
-.bg {
+#bg {
 	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
 	z-index: -1;
-	padding: 0 0;
-}
-
-.bg-image {
-	margin: 0;
+	background-image: url('http://res.cloudinary.com/fivestars/image/upload/v1418671967/taj_normal_zkqyqa.png');
 	width: 100vw;
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
 #scroll-menu {
