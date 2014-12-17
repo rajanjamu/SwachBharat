@@ -13,6 +13,9 @@
 #
 
 class Clean < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :mark
+
   mount_uploader :aphoto, PhotoUploader
   mount_uploader :bphoto, PhotoUploader
 end

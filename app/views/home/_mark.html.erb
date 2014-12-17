@@ -6,7 +6,7 @@
   <h1>
     Mark a location
   </h1>
-  <%= simple_form_for @mark, class: "form-horizontal" do |f| %>
+  <%= simple_form_for @mark, class: "form-horizontal main-form" do |f| %>
     <div class="input_grp container-fluid">
       <div class="icon_container col-xs-1">
         <span class="glyphicon glyphicon-camera"></span>
@@ -39,25 +39,24 @@
   <% @marks.reverse_each do |post| %>
   	<hr>
   	<div class="post">
-      <%= current_user.name %>
+      <%= post.user.name %>
       <span class="post_location"> &nbsp;&nbsp;<%= post.location %></span>
 
         <!-- Share on facebook code -->
-        <% href = 'http://swachbharat.herokuapp.com/marks/' + post.id.to_s %>
-        <% href = Rack::Utils.escape(href) %>
-        <% href = "https://www.facebook.com/sharer/sharer.php?u=" + href + "&t=Cleaning%20" %>
-        <% href = href + post.location %>
-        <a href= "<%= href %>"><%= image_tag 'http://simplesharingbuttons.com/images/simple_icons_black/Facebook.png', width: '26px' %></a>
+        
         <!-- Share on facebook code end -->
 
         <%= link_to content_tag(:span, '', class: "glyphicon glyphicon-trash"),post, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <button type="button" id="btn-start" class="btn btn-default btn-xs">Start</button>
     </div>
     <br />
 
     <div class="post_content">
       <div> <%= image_tag post.photo.url, class: "post_image" %> </div>
       <div class="post_message"><%= post.message %></div>
+      <%= simple_form_for @clean, remote: true, class: "form-horizontal sub-form" do |f| %>
+          <%= f.input :mark_id, as: :hidden, input_html: { value: post.id } %>
+          <%= f.submit 'Start Cleaning', class: "btn btn-default btn-lg", id: "btn-start" %>
+        <% end %>
     </div>
   <% end %>
 </section>
