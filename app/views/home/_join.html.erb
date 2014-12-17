@@ -1,6 +1,7 @@
 <section role="tabpanel" class="tab-pane" id="join">
   <h1> Join your friends </h1>
   <% @cleans.reverse_each do |post| %>
+  <% if !post.isclean %>
   <hr>
   <div class="post"> 
     <%= post.user.name %>
@@ -41,5 +42,6 @@
     <%= f.submit "Finish cleaning", class: "btn btn-primary btn-lg", id: "btn-finish" %>
     <% end %>
   </div>
+  <% end %>
   <% end %>
 </section>

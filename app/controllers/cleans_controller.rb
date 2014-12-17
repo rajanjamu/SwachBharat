@@ -35,18 +35,13 @@ class CleansController < ApplicationController
   end
 
   def update
-    
     @clean = Clean.find(params[:id])
     @clean.isclean = true
     @clean.update_attributes(clean_params)
-
   end
 
   private
-
   def clean_params
     params.require(:clean).permit(:user_id, :aphoto, :bphoto, :message, :mark_id, :isclean)
   end
-
-
 end
