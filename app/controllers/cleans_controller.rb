@@ -38,6 +38,7 @@ class CleansController < ApplicationController
     @clean = Clean.find(params[:id])
     @clean.isclean = true
     @clean.update_attributes(clean_params)
+    redirect_to dashboard_path
   end
 
   private
